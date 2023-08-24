@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 06 - DOM </title>
+    <style>
+        body {
+            background-color: blueviolet;
+            color: white;
+            font: normal 18px Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="_h0">First Exercise with Dom</h1>
+    
+        <p id="_p0">I'm Learning how to use <strong> DOM </strong> (Document Object Model) <br/></p>
+        <p name = "_p1">First time using <strong> DOM </strong> in JS </br></p>
+
+    <div id = "_msg">   
+        Click Hear
+    </div>
+
+    <script>
+        var d = window.document.getElementsByTagName('p')[0]
+        window.document.write(d.innerHTML) // Call the text and the HTML
+        window.document.write(d.innerText) // Call the text, but dont bring STRONG and <br/>, because is HTMl
+
+        var b = window.document.getElementById('_h0')
+        b.innerText = "Dont click hear"
+
+        var d1 = document.querySelector("div#_msg")
+        d1.innerText = "The runner, Ryu"
+        d1.style.color = 'black'
+
+    </script>
+</body>
+</html>

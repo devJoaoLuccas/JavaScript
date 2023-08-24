@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age checker </title>
+    <style>
+        body {
+            background: #3b81d4;
+            color: white;
+            font: normal 17px Arial;
+        }
+
+        ._ageChecker {
+            background: white;
+            margin: auto;
+            width: 20%;
+            padding: 10px;
+            border: 3px solid white;
+            border-radius: 10px;
+            color: black;
+        }
+
+        ._ageBox {
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+        ._mainTitle {
+            text-align: center;
+            font: bold 50px Arial;
+        }
+
+        ._devTxt {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 class = "_mainTitle">Age Checker</h1>
+
+    <div class="_ageChecker">
+
+                <div class="_ageBox">
+                    Year of birth   <input type="number" style="width: 50%;" id="_birthYear">
+                </div>
+
+                <div class="_ageBox">
+                Gender - <input type="checkbox" name="_masc" id="_masc"> Male
+                        <input type="checkbox" name="_femin" id="_femin"> Female
+                </div>
+                <div class="_ageBox">
+                    <input type="button" onclick="check()" value="To check" id="_checkButton">
+                </div>
+
+            <p id="_res">Fill in the details above to see the result</p>
+
+    </div>
+
+    <p class="_devTxt">@Joao.Marques</p>
+
+    <script>
+        
+            function check() {
+                var _result = document.querySelector("p#_res");
+                var _systemYear = new Date();
+                var _userYear = _systemYear.getFullYear().value;
+                var _userBirth = document.querySelector("input#_birthYear");
+                var birth = Number(_userBirth.value);
+                var _checkMale = document.querySelector("input#_masc");
+                var _Checkfemale = document.querySelector("input#_femin");
+                var _male = _checkMale.checked; 
+                var _female = _Checkfemale.checked;
+
+                    if (birth > _userYear || birth < _userYear) {
+                            window.alert(`[ERROR]! Check the date`);
+                    } else {
+                            var age = 2023 - birth;
+
+                            if(age >= 0 && age < 10) {
+                                _result.innerHTML = `<p>You're a <strong>child</strong></p>`;
+                            } else if (age > 10 && age < 18) {
+                                _result.innerHTML = `<p>You're a <strong>teenager</strong></p>`;
+                            } else if (age > 19 && age < 50) {
+                                _result.innerHTML = `<p>You're a <strong>adult</strong></p>`;
+                            } else if (age > 50 && age < 110) {
+                                _result.innerHTML = `<p>You're a <strong>elderly</strong></p>`;
+                            } else {
+                                window.alert(`[ERROR]! Check the date`)
+                            }
+                            
+                            if (_male == true && _female == false) {
+                                _result.innerHTML += `<p> You're a Man with <strong>${age}</strong> years old </p>`;
+                            } else if (_male == false && _female == true) {
+                                _result.innerHTML += `<p> You're a Woman with <strong>${age}</strong> years old </p>`;
+                            } else {
+                                window.alert(`[ERROR]! Check the gender`);
+                            }
+
+                    }
+            }
+    </script>
+</body>
+</html>

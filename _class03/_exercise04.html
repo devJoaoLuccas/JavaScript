@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 08 - Dom</title>
+    <style>
+        body {
+            background-color: purple;
+            font: normal 20px Arial;
+            color: white;
+        }
+
+        input { 
+            width: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Calculator</h1>
+
+    <input type="number" name="_n01" id = "_n01"> 
+    <input type="number" name="_n02" id="_n02">  
+    <br>
+    <br>
+
+    <div> 
+        <input type="button" value="Add" onclick="sum()">
+        <input type="button" value="Subtract" onclick="sub()">
+        <input type="button" value="Multiply" onclick="multi()">
+        <input type="button" value="Divide" onclick="div()">
+    </div>
+
+    <p id ="_p01">Result = </p>
+
+    <script>
+
+        var input1 = window.document.querySelector("input#_n01");
+        var input2 = window.document.querySelector("input#_n02");
+
+        var result = window.document.querySelector("p#_p01");
+
+            function sum() { 
+                var number1 = Number(input1.value);
+                var number2 = Number(input2.value);
+                var sum = number1 + number2;
+
+                result.innerText = `${number1} + ${number2} = ${sum}`;
+            }
+
+            function sub() {
+                var number1 = Number(input1.value);
+                var number2 = Number(input2.value);
+                var sub = number1 - number2;
+
+                result.innerText = `${number1} - ${number2} = ${sub}`;
+            }
+
+            function multi() {
+                var number1 = Number(input1.value);
+                var number2 = Number(input2.value);
+                var multi = number1 * number2;   
+                
+                result.innerText = `${number1} . ${number2} = ${multi}`;
+            }
+
+            function div() {
+                var number1 = Number(input1.value);
+                var number2 = Number(input2.value);
+                var div = number1 / number2;
+
+                result.innerText = `${number1} ÷ ${number2} = ${div}`;
+            }
+    </script>
+</body>
+</html>

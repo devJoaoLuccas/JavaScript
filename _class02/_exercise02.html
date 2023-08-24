@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 03</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font: normal 20pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        window.alert("You will choose 2 numbers for a sum")
+            var n1 = Number(window.prompt("Write a number:")) // Number is for String ---> Number
+            var n2 = Number(window.prompt("Write a number:")) // Number is for String ---> Number
+            var sum = n1 + n2  // Make a sum 
+        document.write(`${n1} + ${n2} = ${sum} </br>`)
+
+        window.alert("You will choose 2 number for conc")
+            var n3 = window.prompt("Write a number:")
+            var n4 = window.prompt("Write a number:")
+            var sum2 = n3 + n4 // Make a concatenation 
+        document.write(`${n3} + ${n4} = ${sum2}`) 
+    </script>
+</body>
+</html>

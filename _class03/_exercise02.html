@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 07 - Dom Events </title>
+    <style>
+        body { 
+            font: normal 18px Arial;
+            color: white;
+        }
+
+        div#area {
+            background-color: green;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        Interact
+    </div>
+
+    <script>
+        var area = window.document.getElementById('area')
+            area.addEventListener('click', click)
+            area.addEventListener('mouseenter', enter)
+            area.addEventListener('mouseout', out)
+
+        function click() {
+            area.innerText = "Clicked!"
+            area.style.background = 'yellow'
+            area.style.color = 'black'
+        }
+
+        function enter() {
+            area.innerText = "Mouse enter!"
+            area.style.color = 'white'
+        }
+
+        function out() {
+            area.innerText = "Mouse Out!"
+            area.style.background = 'green'
+            area.style.color = 'white'
+        }
+
+    </script>
+</body>
+</html>

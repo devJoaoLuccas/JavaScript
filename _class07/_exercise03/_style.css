@@ -1,0 +1,27 @@
+body {
+    background-color: purple;
+}
+
+header { 
+    font: bold 25px Arial;
+    text-align: center;
+    padding: 5px;
+    color: white;
+}
+
+section { 
+    background-color: white;
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+    border: solid 10px white;
+    border-radius: 10px;
+    font: normal 18px Arial;
+}
+
+footer {
+    color: white;
+    font: normal 18px Arial;
+    text-align: center;
+    padding-top: 2%;
+}

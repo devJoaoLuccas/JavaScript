@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 10 - IF</title>
+    <style>
+        body {
+            background-color: lightblue;
+            font: normal 20px Arial;
+        }
+
+        input {
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <h1>DETRAN</h1>
+
+    <p>Write the car speed:</p>
+
+    <input type="number" name="_speed" id="_speed">
+    <input type="button" value="Check" onclick="check()">
+
+    <div id="_res"></div>
+
+    <script>
+        function check(){
+            var input1 = window.document.querySelector("input#_speed");
+            var speed01 = Number(input1.value);
+            var res = window.document.querySelector("div#_res");
+
+            res.innerHTML = `<p> The car speed is <strong>${speed01}Km/h</strong></p>`;
+            
+                if(speed01 > 70) {
+                    res.innerHTML += `<p> You're fined, because overspeeding </p>`;
+                }
+ 
+            res.innerHTML += `Be careful on the steering wheel`; 
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 11 - BRASIL</title>
+    <style>
+        body { 
+            background-color: gold;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>GEO</h1>
+
+    <input type="text" id="_text01">
+    <input type="button" value="Check" onclick="check()">
+
+    <div id="res"></div>
+
+    <script>
+        function check() {
+            var country = window.document.querySelector('input#_text01').value;
+            var result = window.document.querySelector("div#res");
+
+            result.innerHTML = `<p>You're from <strong>${country}</strong></p>`
+
+                if(country == 'Brasil') {
+                    result.innerHTML += `<p>You'are a Brazilian</p>`
+                } else {
+                    result.innerHTML += `<p>You'are a foreigner</p>`
+                }
+                
+            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day time</title>
+
+    <style>
+        body {
+            background-color: red;
+            color: white;
+            font: normal 20px Arial;
+        }
+
+        ._mainTitle {
+            text-align: center;
+            font: normal 45px Arial;
+            padding-top: 4%;
+            margin-bottom: 6%;
+        }
+
+        ._blockHour {
+            background: white;
+            margin: auto;
+            width: 30%;
+            padding: 10px;
+            border: 3px solid white;
+            border-radius: 10px;
+        }
+
+        ._hourText {
+            text-align: center;
+            font: normal 20px black;
+            color: black;
+        }
+
+        ._devTxt {
+            text-align: center;
+        }
+
+        ._hourImg {
+            display: block;
+            margin: auto;
+            width: 50%;
+            margin-bottom: 5%;
+            border-radius: 50%;
+        }
+
+    </style>
+</head>
+<body id = "_body">
+    <h1 class="_mainTitle">Day time</h1>
+    
+        <div class="_blockHour" id="_blockHour">
+            <p class = "_hourText" id="_hourText">
+                hourTxt
+            </p>
+            <img src="https://images.unsplash.com/photo-1595064085577-7c2ef98ec311?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZWFybHklMjBtb3JuaW5nfGVufDB8fDB8fHww&w=1000&q=80" class="_hourImg" alt="" id="_hourImg">
+        </div>
+
+    <p class="_devTxt">@Joao.Marques</p>
+
+    <script>
+
+        var systemHour = new Date(); 
+        var userHour = systemHour.getHours();
+        var body = document.querySelector("body#_body")
+        var txt = document.querySelector("p#_hourText");
+        var img = document.querySelector("img#_hourImg")
+
+        if(userHour <= 12) {
+            txt.innerHTML = `Now is ${userHour} AM! Good Morning`;
+            block.style.background = '#dfdcba';
+            img.innerHTML = `<img src="https://images.unsplash.com/photo-1577257107590-fc448601f16a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YWZ0ZXJub29uJTIwc3VufGVufDB8fDB8fHww&w=1000&q=80">`;
+        } else if (userHour > 12 && userHour < 18) {
+            txt.innerHTML = `Now is ${userHour} PM! Good Afternoon`;
+            body.style.background = '#9b7361';
+        } else { 
+            txt.innerHTML = `Now is ${userHour} PM! Good Night`;
+            body.style.background = '#46494b';
+            img.innerHTML = `<img src="https://images.unsplash.com/photo-1577257107590-fc448601f16a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YWZ0ZXJub29uJTIwc3VufGVufDB8fDB8fHww&w=1000&q=80">`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+body { 
+    background-color: #3b81d4;
+    color: white;
+}
+
+._mainTitle {
+    padding-left: 5%;
+    font: bold 50px Arial;
+    text-align: center;
+}
+
+._countBox {
+    color: black;
+    font: normal 18px arial;
+    background-color: white;
+    width: 50%;
+    margin: auto;
+    border: solid 20px white;
+    border-radius: 10px;
+}
+
+._inputBox {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    width: 10px;
+}
+
+._inputNumber {
+    margin-top: 5px;
+}
